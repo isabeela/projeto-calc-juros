@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { JurosSimplesComponent } from './juros-simples/juros-simples.component';
+import { JurossimplesComponent } from './jurossimples/jurossimples.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'jurossimples', component: JurosSimplesComponent }
+      { path: 'jurossimples', component: JurossimplesComponent }
     ])
   ],
   declarations: [
@@ -23,7 +23,7 @@ import { RouterModule } from '@angular/router';
     HelloComponent,
     NavbarComponent,
     HomeComponent,
-    JurosSimplesComponent
+    JurossimplesComponent
   ],
   bootstrap: [AppComponent]
 })
