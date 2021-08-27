@@ -1,1 +1,37 @@
-<h1> Juros Compostos </h1>
+<div class="container-fluid">
+  <h1>Juros Composto</h1>
+  <h2>Digite o valor desejado para o cálculo:</h2>
+
+  <input type="number" min="0" [(ngModel)]="capit" />
+  <hr />
+  <h2>Digite a taxa de juros em %:</h2>
+  <input type="number" min="0" [(ngModel)]="taxa" />
+  <hr />
+  <h2>Digite o tempo em meses:</h2>
+  <input type="number" min="1" value="0" [(ngModel)]="tempo" />
+
+  <hr />
+  <table class="table" style="border:2px solid darkcyan">
+    <thead>
+      <tr>
+        <th>Capital</th>
+        <th>Taxa(%)</th>
+        <th>Tempo (meses)</th>
+        <th>Juros</th>
+      </tr>
+      <tr *ngFor="let item of getCapitalList(); index as i">
+        <td>{{getCapital()}}</td>
+        <!-- valor -->
+        <td>{{getTaxa()}}</td>
+        <!-- Taxa % -->
+        <td>{{i+1}}</td>
+        <td>{{juros(capit, taxa, i+1).toFixed(2)}}</td>
+        <!-- Resultado -->
+      </tr>
+    </thead>
+  </table>
+  <div>
+    O valor do juros é de R${{juros(capit, taxa, tempo).toFixed(2)}} e o acumulado é de
+    R${{getCapital() ++ juros(capit, taxa, tempo).toFixed(2)}}.
+  </div>
+</div>
