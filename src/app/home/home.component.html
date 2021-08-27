@@ -1,1 +1,7 @@
-<h1> Bem vindo(a) ao app de cálculo de juros </h1>
+<div class="container" style="justify-content:center">
+  <h2 style="font-size:2.5em; text-align:center; margin:10%">Bem vindo! Selecione o que deseja calcular</h2>
+  <div class="box" style="display:flex; justify-content: center">
+    <button  style="border:none; background-color:#0B0B3B; padding:2%; color:#ffffff; margin:5%; font-weight:600" [routerLink]="['/jurosimples']">Juros Simples</button>
+    <button  style="border:none; background-color:#0B0B3B; padding:3%; color:#ffffff; margin:5%; font-weight:600" [routerLink]="['/juroscomposto']">Juros Composto</button>
+  </div>
+</div>
