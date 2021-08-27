@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { JurossimplesComponent } from './jurossimples/jurossimples.component';
 import { JuroscompostoComponent } from './juroscomposto/juroscomposto.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 import { RouterModule } from '@angular/router';
 
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'jurossimples', component: JurossimplesComponent },
-      { path: 'juroscomposto', component: JuroscompostoComponent }
+      { path: 'juroscomposto', component: JuroscompostoComponent },
+      { path: 'perfil', component: PerfilComponent }
     ])
   ],
   declarations: [
@@ -27,7 +29,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     HomeComponent,
     JurossimplesComponent,
-    JuroscompostoComponent
+    JuroscompostoComponent,
+    PerfilComponent
   ],
   bootstrap: [AppComponent]
 })
